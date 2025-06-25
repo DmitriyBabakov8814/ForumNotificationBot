@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ForumNotificationBot.DAL.Database
 {
-    class DatabaseContext
+    class DatabaseContext // Контекст подключения и управления SQLite
     {
     }
 }
