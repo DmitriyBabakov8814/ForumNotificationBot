@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\repos\\ForumNotificationBot\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 878,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\Program.cs",
+              "RelativeDocumentMoniker": "ForumNotificationBot\\Program.cs",
+              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\Program.cs",
+              "RelativeToolTip": "ForumNotificationBot\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T18:05:38.751Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
