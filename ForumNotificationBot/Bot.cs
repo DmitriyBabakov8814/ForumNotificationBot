@@ -65,7 +65,7 @@ namespace ForumNotificationBot
 
             Console.WriteLine(error);
             Console.WriteLine("Ожидание 10 секунд перед повтором...");
-            Thread.Sleep(10000);
+            Thread.Sleep(1000);
             return Task.CompletedTask;
         }
     }
