@@ -1,72 +1,65 @@
 ﻿using ForumNotificationBot.DAL.Data;
 using ForumNotificationBot.DAL.Repositories;
 using ForumNotificationBot.PLL.Controllers;
+using ForumNotificationBot.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
-using ForumNotificationBot.BLL;
 using Telegram.Bot;
-using ForumNotificationBot.Services;
-
-// Убрал using Microsoft.EntityFrameworkCore.Metadata; так как он вызывает конфликт и не нужен здесь
 
 namespace ForumNotificationBot
 {
     internal class Program
     {
-        static async Task Main(string[] args)
+        static async Task Main()
         {
-            var host = new HostBuilder()
-                .ConfigureServices((context, services) =>
+            var host = Host.CreateDefaultBuilder()
+                .ConfigureServices((_, services) =>
                 {
-                    // --- Telegram Bot Client ---
-                    var token = "7531691997:AAHOcOcZ0kKctKNF_Iwv8MHq0C0Bi8uNFeg";
-                    services.AddSingleton<ITelegramBotClient>(_ => new TelegramBotClient(token));
+                    // Telegram Bot
+                    services.AddSingleton<ITelegramBotClient>(_ =>
+                        new TelegramBotClient("7531691997:AAHOcOcZ0kKctKNF_Iwv8MHq0C0Bi8uNFeg"));
 
-                    // --- EF Core / SQLite ---
+                    // EF Core + SQLite
                     services.AddDbContext<AppDbContext>(opt =>
                         opt.UseSqlite("Data Source=app.db"));
-                    services.AddScoped<IUserRepository, UserRepository>();
+                    services.AddScoped<INotificationRepository, NotificationRepository>();
 
-                    // --- HTTP Client for PATCH requests ---
-                    services.AddHttpClient();
-
-                    // --- RabbitMQ setup ---
+                    // RabbitMQ
                     var factory = new ConnectionFactory
                     {
-                        HostName = "localhost"
-                        // При необходимости: UserName, Password, VirtualHost и т.п.
+                        HostName = "185.200.240.235",
+                        Port = 5672,
+                        UserName = "rabbit_user",
+                        Password = "rabbitpass"
                     };
-                    IConnection connection = factory.CreateConnection();
-
-                    // Явно указываем RabbitMQ.Client.IModel, чтобы убрать неоднозначность
-                    RabbitMQ.Client.IModel channel = connection.CreateModel();
+                    var connection = factory.CreateConnection();
+                    var channel = connection.CreateModel();
                     channel.QueueDeclare(
-                        queue: "notifications_queue",
+                        queue: "notifications",
                         durable: true,
                         exclusive: false,
                         autoDelete: false,
-                        arguments: null
-                    );
+                        arguments: null);
                     services.AddSingleton(channel);
-                    services.AddScoped<RabbitMqListener>();
+                    services.AddHostedService<RabbitMqListener>();
 
-                    // --- Telegram Controllers ---
+                    // Telegram controllers & bot
                     services.AddSingleton<InlineKeyboardController>();
-                    services.AddScoped<MessageController>();
-                    services.AddScoped<CallbackQueryController>();
-                    services.AddScoped<VoiceMessageController>();
-
-                    // --- Hosted Service: запускаем Bot как фоновый сервис ---
+                    services.AddSingleton<MessageController>();
+                    services.AddSingleton<CallbackQueryController>();
+                    services.AddSingleton<VoiceMessageController>();
                     services.AddHostedService<Bot>();
                 })
-                .UseConsoleLifetime()
                 .Build();
 
-            Console.WriteLine("Сервис запущен");
+            // Создать БД и таблицу NotificationMessages
+            using var scope = host.Services.CreateScope();
+            var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+            db.Database.EnsureCreated();
+
             await host.RunAsync();
-            Console.WriteLine("Сервис остановлен");
         }
     }
 }

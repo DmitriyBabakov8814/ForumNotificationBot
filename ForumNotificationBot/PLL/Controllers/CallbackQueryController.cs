@@ -1,7 +1,6 @@
-﻿using ForumNotificationBot.PLL.Controllers;
+﻿using ForumNotificationBot.DAL.Repositories;
 using Telegram.Bot;
 using Telegram.Bot.Types;
-using System.Collections.Concurrent;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -11,42 +10,46 @@ namespace ForumNotificationBot.PLL.Controllers
     {
         private readonly ITelegramBotClient _botClient;
         private readonly InlineKeyboardController _keyboardController;
-        private readonly MessageController _messageController;
+        private readonly INotificationRepository _notificationRepository;
 
-        private static ConcurrentDictionary<long, string> _userLanguages = new();
-
-        public CallbackQueryController(ITelegramBotClient botClient, InlineKeyboardController keyboardController, MessageController messageController)
+        public CallbackQueryController(
+            ITelegramBotClient botClient,
+            InlineKeyboardController keyboardController,
+            INotificationRepository notificationRepository)
         {
             _botClient = botClient;
             _keyboardController = keyboardController;
-            _messageController = messageController;
+            _notificationRepository = notificationRepository;
         }
 
         public async Task Handle(CallbackQuery query, CancellationToken ct)
         {
             var chatId = query.Message.Chat.Id;
+            string lang = query.Data == "lang_en" ? "en" : "ru";
 
-            switch (query.Data)
+            // Убираем клавиатуру
+            await _botClient.EditMessageReplyMarkup(
+                chatId: chatId,
+                messageId: query.Message.MessageId,
+                replyMarkup: null,
+                cancellationToken: ct);
+
+            bool subscribed = await _notificationRepository
+                .ExistsByTelegramIdAsync(chatId.ToString());
+
+            string text = subscribed switch
             {
-                case "lang_ru":
-                    _userLanguages[chatId] = "ru";
-                    await _botClient.EditMessageReplyMarkup(chatId, query.Message.MessageId, replyMarkup: null, cancellationToken: ct);
-                    await _messageController.CheckUserRegistration(chatId, "ru", ct);
-                    break;
+                true when lang == "en" => "✅ You are subscribed to forum notifications.",
+                true => "✅ Вы подписаны на уведомления форума.",
+                false when lang == "en" => "🔒 You are not registered. Please visit https://example.com to register.",
+                _ => "🔒 Вы не зарегистрированы. Перейдите на https://example.com для регистрации."
+            };
 
-                case "lang_en":
-                    _userLanguages[chatId] = "en";
-                    await _botClient.EditMessageReplyMarkup(chatId, query.Message.MessageId, replyMarkup: null, cancellationToken: ct);
-                    await _messageController.CheckUserRegistration(chatId, "en", ct);
-                    break;
-
-                // Здесь можно убрать confirm_yes/confirm_no, так как логика теперь в CheckUserRegistration
-                // Можно либо оставить для других целей, либо удалить
-
-                default:
-                    await _botClient.AnswerCallbackQuery(query.Id, "Неизвестная команда", cancellationToken: ct);
-                    break;
-            }
+            await _botClient.SendMessage(
+                chatId: chatId,
+                text: text,
+                cancellationToken: ct);
         }
+
     }
 }

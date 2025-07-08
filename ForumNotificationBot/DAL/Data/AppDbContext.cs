@@ -1,18 +1,19 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ForumNotificationBot.BLL.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace ForumNotificationBot.DAL.Data
 {
     public class AppDbContext : DbContext
     {
-        public DbSet<User> Users { get; set; }
+        public DbSet<NotificationEntity> NotificationMessages { get; set; }
 
-        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options)
+            : base(options) { }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<NotificationEntity>().ToTable("NotificationMessages");
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

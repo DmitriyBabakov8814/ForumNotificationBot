@@ -1,101 +1,89 @@
-﻿using System;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
-using ForumNotificationBot.BLL.Models;
+﻿using ForumNotificationBot.BLL.Models;
 using ForumNotificationBot.DAL.Repositories;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
-using ForumNotificationBot.DAL.Data;
+using System;
+using System.Text;
+using System.Text.Json;
+using System.Threading;
+using Telegram.Bot;
 
 namespace ForumNotificationBot.Services
 {
-    public class RabbitMqListener
+    public class RabbitMqListener : BackgroundService
     {
-        private readonly RabbitMQ.Client.IModel _channel;
-        private readonly IUserRepository _userRepository;
-        private readonly HttpClient _httpClient;
+        private readonly IModel _channel;
+        private readonly IServiceScopeFactory _scopeFactory;
+        private readonly ITelegramBotClient _botClient;
+        private const string QueueName = "notifications";
 
-        public RabbitMqListener(RabbitMQ.Client.IModel channel, IUserRepository userRepository, HttpClient httpClient)
+        public RabbitMqListener(
+            IModel channel,
+            IServiceScopeFactory scopeFactory,
+            ITelegramBotClient botClient)
         {
-            _channel = channel;
-            _userRepository = userRepository;
-            _httpClient = httpClient;
+            _channel = channel ?? throw new ArgumentNullException(nameof(channel));
+            _scopeFactory = scopeFactory ?? throw new ArgumentNullException(nameof(scopeFactory));
+            _botClient = botClient ?? throw new ArgumentNullException(nameof(botClient));
+
+            Console.WriteLine(_channel.IsOpen
+                ? "✅ Подключение к RabbitMQ установлено."
+                : "❌ Нет подключения к RabbitMQ.");
         }
 
-        public void StartListening()
+        protected override Task ExecuteAsync(CancellationToken stoppingToken)
         {
-            var consumer = new EventingBasicConsumer(_channel);
-
-            consumer.Received += async (sender, ea) =>
+            if (!_channel.IsOpen)
             {
-                var body = ea.Body.ToArray();
-                var json = Encoding.UTF8.GetString(body);
+                Console.WriteLine("❌ Канал RabbitMQ закрыт. Слушатель не запущен.");
+                return Task.CompletedTask;
+            }
 
-                NotificationMessage notification;
-                try
-                {
-                    notification = JsonSerializer.Deserialize<NotificationMessage>(json);
-                }
-                catch
-                {
-                    _channel.BasicAck(ea.DeliveryTag, false);
-                    return;
-                }
+            var consumer = new EventingBasicConsumer(_channel);
+            consumer.Received += OnMessageReceived;
+            _channel.BasicConsume(queue: QueueName, autoAck: false, consumer: consumer);
 
+            Console.WriteLine("👂 Слушатель RabbitMQ запущен.");
+            return Task.CompletedTask;
+        }
+
+        private async void OnMessageReceived(object sender, BasicDeliverEventArgs ea)
+        {
+            var json = Encoding.UTF8.GetString(ea.Body.ToArray());
+            Console.WriteLine("📩 Получено сообщение из RabbitMQ:");
+            Console.WriteLine(json);
+
+            try
+            {
+                var notification = JsonSerializer.Deserialize<NotificationEntity>(json);
                 if (notification == null)
-                {
-                    _channel.BasicAck(ea.DeliveryTag, false);
-                    return;
-                }
+                    throw new Exception("Десериализация вернула null.");
 
-                bool userExists = false;
+                using var scope = _scopeFactory.CreateScope();
+                var repo = scope.ServiceProvider.GetRequiredService<INotificationRepository>();
 
-                if (notification.RecipientTelegramId != null)
-                {
-                    userExists = await _userRepository.ExistsByTelegramIdAsync(notification.RecipientTelegramId.Value);
-                    if (!userExists)
-                    {
-                        await _userRepository.AddUserAsync(new DAL.Data.User
-                        {
-                            TelegramId = notification.RecipientTelegramId,
-                            Email = notification.RecipientEmail,
-                            UserId = notification.UserId
-                        });
-                    }
-                }
-                else if (!string.IsNullOrEmpty(notification.RecipientEmail))
-                {
-                    userExists = await _userRepository.ExistsByEmailAsync(notification.RecipientEmail);
-                    if (!userExists)
-                    {
-                        await _userRepository.AddUserAsync(new DAL.Data.User
-                        {
-                            Email = notification.RecipientEmail,
-                            UserId = notification.UserId
-                        });
-                    }
-                }
+                await repo.AddAsync(notification);
+                Console.WriteLine($"✅ Уведомление для {notification.RecipientTelegramId} сохранено в БД.");
 
-                // PATCH-запрос к форуму
-                var patchPayload = JsonSerializer.Serialize(new { status = "sent" });
-                var content = new StringContent(patchPayload, Encoding.UTF8, "application/json");
-                var url = $"https://yourforum.example.com/api/notifications/{notification.Id}/update-status/";
-
-                try
+                bool subscribed = await repo.ExistsByTelegramIdAsync(notification.RecipientTelegramId);
+                if (subscribed && long.TryParse(notification.RecipientTelegramId, out var chatId))
                 {
-                    await _httpClient.PatchAsync(url, content);
+                    await _botClient.SendMessage(
+                        chatId,
+                        $"📬 Новое уведомление:\n{notification.Title}\n{notification.Message}");
+                    Console.WriteLine($"📤 Уведено Telegram ID: {chatId}");
                 }
-                catch
-                {
-                    // логика при ошибке
-                }
-
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("❌ Ошибка при обработке уведомления: " + ex.Message);
+            }
+            finally
+            {
                 _channel.BasicAck(ea.DeliveryTag, false);
-            };
-
-            _channel.BasicConsume(queue: "notifications_queue", autoAck: false, consumer: consumer);
+            }
         }
     }
 }

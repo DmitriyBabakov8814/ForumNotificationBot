@@ -7,48 +7,48 @@
       "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bll\\services\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bll\\services\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bll\\models\\notificationmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bll\\models\\notificationmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\data\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\data\\notificationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\data\\notificationentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\repositories\\iuserrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\repositories\\notificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\repositories\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\callbackquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\callbackquerycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\inlinekeyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\inlinekeyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bll\\models\\notificationmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bll\\models\\notificationmessage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\messagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\voicemessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\voicemessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\inlinekeyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\inlinekeyboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\bll\\services\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\bll\\services\\rabbitmqlistener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\dal\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\dal\\repositories\\inotificationrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\pll\\controllers\\voicemessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|solutionrelative:forumnotificationbot\\pll\\controllers\\voicemessagecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FB5BC1F6-017C-412C-B7D8-9CA0D63313CF}|ForumNotificationBot\\ForumNotificationBot.csproj|c:\\repos\\forumnotificationbot\\forumnotificationbot\\forumnotificationbot.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
@@ -65,83 +65,84 @@
           "SelectedChildIndex": 13,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 9,
               "Title": "RabbitMqListener.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\BLL\\Services\\RabbitMqListener.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\BLL\\Services\\RabbitMqListener.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\BLL\\Services\\RabbitMqListener.cs",
               "RelativeToolTip": "ForumNotificationBot\\BLL\\Services\\RabbitMqListener.cs",
-              "ViewState": "AgIAAEIAAAAAAAAAAAAIwE0AAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAwwEgAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T17:42:02.001Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "INotificationRepository.cs",
+              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\INotificationRepository.cs",
+              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Repositories\\INotificationRepository.cs",
+              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\INotificationRepository.cs",
+              "RelativeToolTip": "ForumNotificationBot\\DAL\\Repositories\\INotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T18:01:39.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationRepository.cs",
+              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\NotificationRepository.cs",
+              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Repositories\\NotificationRepository.cs",
+              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\NotificationRepository.cs",
+              "RelativeToolTip": "ForumNotificationBot\\DAL\\Repositories\\NotificationRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T21:45:32.658Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "NotificationEntity.cs",
+              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\NotificationEntity.cs",
+              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Data\\NotificationEntity.cs",
+              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\NotificationEntity.cs",
+              "RelativeToolTip": "ForumNotificationBot\\DAL\\Data\\NotificationEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T21:44:53.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "NotificationMessage.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\BLL\\Models\\NotificationMessage.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\BLL\\Models\\NotificationMessage.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\BLL\\Models\\NotificationMessage.cs",
               "RelativeToolTip": "ForumNotificationBot\\BLL\\Models\\NotificationMessage.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwBAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T17:41:42.616Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserRepository.cs",
-              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\UserRepository.cs",
-              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Repositories\\UserRepository.cs",
-              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\UserRepository.cs",
-              "RelativeToolTip": "ForumNotificationBot\\DAL\\Repositories\\UserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:41:11.491Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IUserRepository.cs",
-              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\IUserRepository.cs",
-              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Repositories\\IUserRepository.cs",
-              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Repositories\\IUserRepository.cs",
-              "RelativeToolTip": "ForumNotificationBot\\DAL\\Repositories\\IUserRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:41:03.925Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\User.cs",
-              "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Data\\User.cs",
-              "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\User.cs",
-              "RelativeToolTip": "ForumNotificationBot\\DAL\\Data\\User.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T17:40:22.656Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "AppDbContext.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\AppDbContext.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\DAL\\Data\\AppDbContext.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\DAL\\Data\\AppDbContext.cs",
               "RelativeToolTip": "ForumNotificationBot\\DAL\\Data\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-02T17:40:12.358Z",
               "EditorCaption": ""
@@ -154,27 +155,26 @@
               "RelativeDocumentMoniker": "ForumNotificationBot\\ForumNotificationBot.csproj",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\ForumNotificationBot.csproj",
               "RelativeToolTip": "ForumNotificationBot\\ForumNotificationBot.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-25T18:42:56.119Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-25T18:42:56.119Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 4,
               "Title": "Bot.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\Bot.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\Bot.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\Bot.cs",
               "RelativeToolTip": "ForumNotificationBot\\Bot.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAowDoAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T18:33:20.959Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "VoiceMessageController.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\VoiceMessageController.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\PLL\\Controllers\\VoiceMessageController.cs",
@@ -193,33 +193,33 @@
               "RelativeDocumentMoniker": "ForumNotificationBot\\PLL\\Controllers\\InlineKeyboardController.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\InlineKeyboardController.cs",
               "RelativeToolTip": "ForumNotificationBot\\PLL\\Controllers\\InlineKeyboardController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T18:32:05.748Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
               "Title": "CallbackQueryController.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\CallbackQueryController.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\PLL\\Controllers\\CallbackQueryController.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\CallbackQueryController.cs",
               "RelativeToolTip": "ForumNotificationBot\\PLL\\Controllers\\CallbackQueryController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAowCQAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAowDEAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T18:31:54.515Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 7,
               "Title": "MessageController.cs",
               "DocumentMoniker": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\MessageController.cs",
               "RelativeDocumentMoniker": "ForumNotificationBot\\PLL\\Controllers\\MessageController.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\PLL\\Controllers\\MessageController.cs",
               "RelativeToolTip": "ForumNotificationBot\\PLL\\Controllers\\MessageController.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAwwDMAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T18:31:46.594Z",
               "EditorCaption": ""
@@ -232,7 +232,7 @@
               "RelativeDocumentMoniker": "ForumNotificationBot\\Program.cs",
               "ToolTip": "C:\\repos\\ForumNotificationBot\\ForumNotificationBot\\Program.cs",
               "RelativeToolTip": "ForumNotificationBot\\Program.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAAgwEAAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowCAAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-25T18:05:38.751Z",
               "EditorCaption": ""

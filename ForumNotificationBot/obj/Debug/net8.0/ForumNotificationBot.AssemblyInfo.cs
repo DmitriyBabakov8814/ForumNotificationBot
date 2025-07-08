@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ForumNotificationBot")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+95da32c17640f32d5fa4dd90beb747e8d1c730d7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bcdf20345e72f98fa7516d32735dcc1e4a675627")]
 [assembly: System.Reflection.AssemblyProductAttribute("ForumNotificationBot")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ForumNotificationBot")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -8,8 +8,7 @@ namespace ForumNotificationBot.PLL.Controllers
         {
             return new InlineKeyboardMarkup(new[]
             {
-                new[]
-                {
+                new[] {
                     InlineKeyboardButton.WithCallbackData("Русский 🇷🇺", "lang_ru"),
                     InlineKeyboardButton.WithCallbackData("English 🇬🇧", "lang_en")
                 }
